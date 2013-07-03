@@ -16,18 +16,21 @@ int main(int argc, char *argv[])
 
 	Node *head = NULL;
 
-	// add a bunch of items
 	int i = 0;
 	for(i = 0; i < 5; i++) {
 		Node *item = (Node *)malloc(sizeof(Node));
 		item->data = i;
 		item->next = NULL;
-		head = add_item(item, head);
+		add_list_item(item, &head);
 	}
-	printf("\n size = %d",get_size(head));
+	printf("\n size = %d",get_list_size(head));
 	display_list(head);
 
-    printf("\nexit");
+	dispose_list(&head);
+	display_list(head);
+
+	printf("\n");
+    printf("exit");
 
 	return 0;
 }

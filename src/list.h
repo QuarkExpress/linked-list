@@ -17,12 +17,13 @@ typedef struct node
 } Node;
 
 
-Node *add_item(Node *item, Node *head);
+void add_list_item(Node *item, Node **head);
 
-int get_size(Node *list);
+int get_list_size(Node *list);
 
 void display_list(Node *head);
 
+void dispose_list(Node **head);
 
 
 #endif /* LINKEDLIST_H_ */
