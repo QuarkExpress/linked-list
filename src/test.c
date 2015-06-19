@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
 	display_list(head);
 
 	printf("\n");
-    printf("exit");
+	printf("exit");
 
 	return 0;
 }
